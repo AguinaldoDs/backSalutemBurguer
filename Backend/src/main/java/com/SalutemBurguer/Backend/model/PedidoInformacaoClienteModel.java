@@ -16,7 +16,7 @@ public class PedidoInformacaoClienteModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_pedido")
     @JsonBackReference("informacoesCliente-pedido")
     private PedidoModel pedidoModel;
@@ -29,5 +29,8 @@ public class PedidoInformacaoClienteModel {
 
     @Column(nullable = true)
     private String telefone;
+
+    @Column(nullable = true)
+    private String observacao;
 
 }

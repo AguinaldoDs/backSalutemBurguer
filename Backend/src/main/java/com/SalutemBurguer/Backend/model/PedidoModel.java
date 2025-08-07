@@ -21,9 +21,9 @@ public class PedidoModel {
     @Column(nullable = true)
     private LocalDateTime dataRegistro;
 
-    @OneToMany(mappedBy = "pedidoModel", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "pedidoModel", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonManagedReference("informacoesCliente-pedido")
-        private List<PedidoInformacaoClienteModel> informacoesCliente;
+    private PedidoInformacaoClienteModel informacoesCliente;
 
     @OneToMany(mappedBy = "pedidoModel", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonManagedReference("lanche-pedido")

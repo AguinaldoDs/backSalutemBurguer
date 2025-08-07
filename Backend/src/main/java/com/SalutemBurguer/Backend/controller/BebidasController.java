@@ -45,6 +45,4 @@ public class BebidasController {
                 })
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
-
-
 }

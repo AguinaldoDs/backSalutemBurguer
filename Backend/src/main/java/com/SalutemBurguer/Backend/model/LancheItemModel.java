@@ -37,6 +37,4 @@ public class LancheItemModel {
     @Column(nullable = true)
     private Boolean ativo;
 
-
-
 }
