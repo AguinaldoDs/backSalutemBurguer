@@ -23,11 +23,10 @@ public class PedidoController {
         return pedidoRepository.findAll();
     }
 
-
     @PostMapping("/savePedido")
     public ResponseEntity<PedidoModel> criarPedido(@RequestBody PedidoModel pedido) {
         PedidoModel pedidoSalvo = pedidoRepository.save(pedido);
-
         return ResponseEntity.status(HttpStatus.CREATED).body(pedidoSalvo);
     }
+
 }

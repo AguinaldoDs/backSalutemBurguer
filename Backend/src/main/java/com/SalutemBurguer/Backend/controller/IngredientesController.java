@@ -23,8 +23,6 @@ public class IngredientesController {
         return ingredientesRepository.findByAtivoTrue();
     }
 
-
-    // CRUD dos INGREDIENTES
     @GetMapping("/findAllIngredientes")
     public List<IngredientesModel> findAll() {
         return ingredientesRepository.findAll();
@@ -53,5 +51,4 @@ public class IngredientesController {
                 })
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
-
 }

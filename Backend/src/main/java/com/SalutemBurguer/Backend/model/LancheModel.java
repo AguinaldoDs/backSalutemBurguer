@@ -25,7 +25,7 @@ public class LancheModel {
     @Column(nullable = true)
     private boolean ativo;
 
-    @OneToMany(mappedBy = "lanche", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "lanche", cascade = CascadeType.ALL, fetch = FetchType.LAZY,orphanRemoval = true)
     @JsonManagedReference
     private List<LancheItemModel> ingredientes;
 

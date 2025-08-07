@@ -27,8 +27,3 @@ public class PedidoItemBebidaModel {
     @JsonBackReference("bebida-pedido")
     private PedidoModel pedidoModel;
 }
-
-
-// Anatações importantes, lembrar de verificar os campos destinos do json
-// se bate corretamente com os esperados no model, além, de verificar
-// se o nome dos elementos estão correspondentes
