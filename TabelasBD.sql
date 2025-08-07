@@ -57,6 +57,7 @@ create table informacoes_cliente_pedido (
     nome varchar(200),
     endereco varchar(300),
     telefone varchar(20),
+    observacao varchar(1000),
     data_registro timestamp default current_timestamp
 );
 
